@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.ufc.quixada.backontrackservertest.activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView3"
+            android:layout_marginTop="16dp"
+            android:text="Nome: "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Descrição:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/textView2"
+            android:text="nome do exercício"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_below="@+id/textView2"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/textView3"
+            android:text="descrição do exercício."
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:onClick="getExercise"
+            android:text="get" />
+
+        <ProgressBar
+            android:id="@+id/pgbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_get"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view_divisor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btn_get"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="76dp"
+            android:background="@color/colorPrimaryDark"></View>
+
+        <TextView
+            android:id="@+id/textV_esforco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textV_send_esforco"
+            android:layout_alignEnd="@+id/textV_repetitions"
+            android:layout_alignTop="@+id/textV_send_esforco"
+            android:layout_below="@+id/view_divisor"
+            android:gravity="center"
+            android:text="Esforço:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/textV_send_esforco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_divisor"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/textV_esforco"
+            android:hint="nível de esforço"
+            android:inputType="numberDecimal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textV_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textV_send_time"
+            android:layout_alignEnd="@+id/textV_repetitions"
+            android:layout_alignTop="@+id/textV_send_time"
+            android:gravity="center"
+            android:text="Tempo:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/textV_send_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_send_esforco"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/textV_time"
+            android:hint="tempo gasto"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+
+            />
+
+        <TextView
+            android:id="@+id/textV_sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textV_send_sets"
+            android:layout_alignEnd="@+id/textV_repetitions"
+            android:layout_alignTop="@+id/textV_send_sets"
+            android:layout_below="@+id/textV_send_time"
+            android:gravity="center"
+            android:text="Séries:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/textV_send_sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_send_time"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/textV_sets"
+            android:hint="número de séries"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+
+            />
+
+        <TextView
+            android:id="@+id/textV_repetitions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textV_send_repetition"
+            android:layout_alignTop="@+id/textV_send_repetition"
+            android:gravity="center"
+            android:text="Repetições:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/textV_send_repetition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_send_sets"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/textV_repetitions"
+            android:hint="número de repetições"
+            android:inputType="numberDecimal"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textV_send_repetition"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:hint="comentário"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_comment"
+            android:layout_centerHorizontal="true"
+            android:onClick="postReport"
+            android:text="POST" />
+
+        <TextView
+            android:id="@+id/textV_OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btn_post"
+            android:layout_alignTop="@+id/btn_post"
+            android:layout_below="@+id/edit_comment"
+            android:layout_toEndOf="@+id/btn_post"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/green"
+            android:textSize="24sp"
+            android:text="POSTED"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</ScrollView>
